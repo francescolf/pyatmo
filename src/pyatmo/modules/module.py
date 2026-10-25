@@ -418,6 +418,20 @@ class PowerMixin(EntityBase):
         self.history_features.add("power")
 
 
+class ChargingStationMixin(EntityBase):
+    """Mixin for charging station data."""
+
+    def __init__(self, home: Home, module: ModuleT) -> None:
+        """Initialize charging station mixin."""
+
+        super().__init__(home, module)
+        self.charging_station_status: int | None = None
+        self.charging_station_error: int | None = None
+        self.current_charge_duration: int | None = None
+        self.current_charge_instant_consumption: int | None = None
+        self.current_total_charge_consumption: int | None = None
+
+
 class EventMixin(EntityBase):
     """Mixin for event data."""
 

@@ -46,6 +46,7 @@ class DeviceType(StrEnum):
     NLD = "NLD"  # Remote control double on off dimmer
     NLDD = "NLDD"  # Dimmer
     NLE = "NLE"  # Connected Ecometer
+    NLEVSE = "NLEVSE"  # Electric vehicle charging station
     NLF = "NLF"  # Dimmer Light Switch
     NLFE = "NLFE"  # Dimmer Light Switch Evolution
     NLFN = "NLFN"  # light switch with neutral
@@ -184,6 +185,7 @@ DEVICE_CATEGORY_MAP: dict[DeviceType, DeviceCategory] = {
     DeviceType.BNS: DeviceCategory.climate,
     DeviceType.NLPC: DeviceCategory.meter,
     DeviceType.NLE: DeviceCategory.meter,
+    DeviceType.NLEVSE: DeviceCategory.meter,
     DeviceType.Z3L: DeviceCategory.dimmer,
     DeviceType.Z3V: DeviceCategory.shutter,
     DeviceType.NLUP: DeviceCategory.switch,
@@ -257,6 +259,7 @@ DEVICE_DESCRIPTION_MAP: dict[DeviceType, tuple[str, str]] = {
     DeviceType.NLPT: ("Legrand", "Connected Latching Relay"),
     DeviceType.NLPC: ("Legrand", "Connected Energy Meter"),
     DeviceType.NLE: ("Legrand", "Connected Ecometer"),
+    DeviceType.NLEVSE: ("Legrand", "Electric Vehicle Charging Station"),
     DeviceType.NLPS: ("Legrand", "Smart Load Shedder"),
     DeviceType.NLC: ("Legrand", "Cable Outlet"),
     DeviceType.NLT: ("Legrand", "Global Remote Control"),

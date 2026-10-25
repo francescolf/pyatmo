@@ -7,6 +7,7 @@ from typing import TYPE_CHECKING
 
 from pyatmo.modules.module import (
     BatteryMixin,
+    ChargingStationMixin,
     ContactorMixin,
     Dimmer,
     EnergyHistoryLegacyMixin,
@@ -113,6 +114,10 @@ class NLPC(FirmwareMixin, EnergyHistoryMixin, PowerMixin, Module):
 
 class NLE(FirmwareMixin, EnergyHistoryLegacyMixin, Module):
     """Legrand / BTicino connected ecometer. no power supported for the NLE (in the home status API)."""
+
+
+class NLEVSE(FirmwareMixin, WifiMixin, ChargingStationMixin, Module):
+    """Legrand electric vehicle charging station."""
 
 
 class NLPS(FirmwareMixin, EnergyHistoryMixin, PowerMixin, Module):
